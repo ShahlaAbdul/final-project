@@ -1,0 +1,14 @@
+button {
+  border-radius: 10px;
+  min-width: 150px;
+  height: 50px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 14px;
+  border: 1px solid #4a8cff8e;
+  transition: 400ms;
+  font-weight: 500;
+  &:hover {
+    color: #ff8000;
+  }
+}

@@ -1,0 +1,118 @@
+header {
+  max-width: 100%;
+  background-color: #00004de6;
+  color: #dedeed;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  min-height: 20px;
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 0px;
+    width: 90%;
+    margin: 0 auto;
+    gap: 20px;
+    font-size: 13px;
+
+    i {
+      color: red;
+    }
+    .header_left {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+      .location {
+        display: flex;
+        gap: 5px;
+      }
+      .time {
+        display: flex;
+        gap: 5px;
+      }
+      .call {
+        display: flex;
+        gap: 5px;
+      }
+    }
+    .header_right {
+      display: flex;
+      gap: 20px;
+      max-width: 30%;
+      i {
+        color: #fff;
+        font-size: 15px;
+        &:hover {
+          color: red;
+          transition: all 400ms;
+        }
+      }
+    }
+  }
+}
+nav {
+  display: flex;
+  background-color: rgb(232, 217, 217);
+  max-width: 100%;
+  width: 100%;
+  min-height: 50px;
+  padding: 12px 0px;
+  background-color: #4c4cf8;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    width: var(--main-section-widthn);
+    width: 80%;
+    align-items: center;
+    margin: 0 auto;
+    .logo {
+      display: flex;
+      font-size: 34px;
+      color: #000033;
+      font-weight: 600;
+      span {
+        color: red;
+      }
+      a:hover {
+        color: #000033;
+      }
+    }
+    .navbar_pages {
+      display: flex;
+      font-size: 15px;
+
+      ul {
+        display: flex;
+        gap: 10px;
+        color: var(--text-color);
+        li {
+          :hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .login {
+      border: 1px solid rgb(200, 191, 191);
+      border-radius: 7px;
+      width: 100px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 600ms;
+
+      &:hover {
+        background-color: #000033;
+        a {
+          //   color: var(--main-icon-color);
+        }
+      }
+    }
+  }
+}

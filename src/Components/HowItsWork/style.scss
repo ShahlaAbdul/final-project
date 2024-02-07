@@ -1,0 +1,35 @@
+#how_work {
+  max-width: 100%;
+  min-height: 50vh;
+  padding: 3rem 0px;
+  .how_work {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: var(--main-section-width);
+    margin: 0 auto;
+    color: var(--main-h1-color);
+
+    .how_work_head {
+      font-size: 24px;
+    }
+    .how_work_cards {
+      padding: 30px 0px;
+      width: 100%;
+      min-height: 45vh;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-evenly;
+      border-radius: 40px;
+      background-color: #e6e6ffa6;
+      text-align: center;
+
+      p {
+        font-weight: bold;
+      }
+    }
+  }
+}
