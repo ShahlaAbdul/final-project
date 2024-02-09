@@ -1,6 +1,6 @@
 header {
   max-width: 100%;
-  background-color: #00004de6;
+  background-color: #240808;
   color: #dedeed;
   display: flex;
   align-items: center;
@@ -54,15 +54,14 @@ header {
 }
 nav {
   display: flex;
-  background-color: rgb(232, 217, 217);
   max-width: 100%;
   width: 100%;
   min-height: 50px;
   padding: 12px 0px;
-  background-color: #4c4cf8;
   color: #fff;
   position: fixed;
   top: 0;
+  z-index: 2;
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -73,13 +72,10 @@ nav {
     .logo {
       display: flex;
       font-size: 34px;
-      color: #000033;
+      color: #e91111;
       font-weight: 600;
       span {
         color: red;
-      }
-      a:hover {
-        color: #000033;
       }
     }
     .navbar_pages {

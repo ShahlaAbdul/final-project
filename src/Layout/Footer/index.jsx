@@ -81,7 +81,7 @@ function Footer() {
         </div>
         <div className="footer_bottom">
           <div className="left">
-            <Button1 text={"Daxil Ol"}></Button1>
+            <Button1 className={"btn"} text={"Daxil Ol"}></Button1>
             <Button1 text={"Qeydiyyat"}></Button1>
           </div>
           <div className="right">

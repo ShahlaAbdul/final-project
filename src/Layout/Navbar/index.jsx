@@ -40,7 +40,7 @@ function Navbar() {
           <div className="navbar_pages">
             <ul>
               <li>
-                <NavLink to={"/"}>Əsas Səhifə</NavLink>
+                <NavLink to={"/"}>Əsas Səhifə </NavLink>
               </li>
               <li>
                 <NavLink to={"/services"}>Xidmətlər</NavLink>

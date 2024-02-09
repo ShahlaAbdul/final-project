@@ -1,0 +1,95 @@
+#faqs {
+  border: 2px solid black;
+  max-width: 100%;
+  min-height: 50vh;
+  padding: 6rem 0px;
+  .faqs {
+    width: var(--main-section-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    .faqs_head {
+      display: flex;
+      width: 100%;
+      min-height: 80px;
+      font-weight: 900;
+      font-size: 25px;
+      justify-content: center;
+      align-items: center;
+    }
+    .faqs_content {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      .faq_card {
+        max-width: 520px;
+        width: 90%;
+        min-height: 60px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        transition: all 900ms;
+
+        i {
+          color: #08478770;
+          //   font-family: "Poppins", sans-serif;
+        }
+        .question {
+          width: 100%;
+          height: 70px;
+          padding: 10px;
+          background-color: #e6e6ff9c;
+          border-radius: 10px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          transition: all 300ms;
+          padding: 0px 20px;
+          border: 2px solid #08478739;
+        }
+
+        p {
+          font-size: 16px;
+        }
+        .answer {
+          width: 100%;
+          min-height: 70px;
+          border-radius: 20px;
+          display: flex;
+          align-items: center;
+          padding: 20px 20px;
+          font-size: 13px;
+          font-weight: 300;
+          line-height: 22px;
+          border: 2px solid #08478739;
+          box-shadow: #0847872a 0px 8px 24px;
+          //   display: none;
+          transition: all 900ms;
+        }
+      }
+    }
+    .faq_button {
+      border-radius: 10px;
+      min-width: 150px;
+      height: 50px;
+      background-color: transparent;
+      color: #000000;
+      font-size: 14px;
+      border: 1px solid #4a8cff8e;
+      transition: 400ms;
+      font-weight: 500;
+      &:hover {
+        color: #ff8000;
+      }
+    }
+
+    // .active {
+    //   display: none;
+    // }
+  }
+}
