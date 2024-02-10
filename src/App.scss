@@ -8,9 +8,17 @@
 :root {
   --main-section-width: 80%;
   --main-h1-color: #00001a;
-  --text-fonts: 'Outfit', sans-serif;
-  --title-fonts: 'Roboto', sans-serif;
-  --style-fonts: 'Caveat', cursive;
+  --text-fonts: "Outfit", sans-serif;
+  --title-fonts: "Roboto", sans-serif;
+  --style-fonts: "Caveat", cursive;
+  --p-color: #444444;
+  // light mod colors
+  --main-theme-light: #fff;
+  --main-theme-dark: #111111;
+  --theme-color-light: #df1119;
+  --theme-color-dark: #b5090d;
+  --theme-color2-dark: #000000;
+  --theme-color2: #f3f4f7;
 }
 body {
   img {
@@ -23,6 +31,14 @@ body {
   }
   button {
     cursor: pointer;
+  }
+  p {
+    // color: var(--p-color);
+    line-height: 24px;
+    font-size: 14px;
+    font-family: var(--text-fonts);
+    letter-spacing: -0.01rem;
+    font-weight: 400;
   }
   font-family: "Ubuntu", sans-serif;
 }

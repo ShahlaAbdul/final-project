@@ -1,24 +1,36 @@
-function WhatWeDoCard() {
+import "./style.scss";
+import { NavLink } from "react-router-dom";
+// eslint-disable-next-line react/prop-types
+function WhatWeDoCard({ image, icon, h2text}) {
   return (
-    <div className="card">
-      <div className="card_container">
-        <div className="card_image">
-          <div className="img">
-            <a href="">
-              <img
-                src="https://html.kodesolution.com/2023/transtex-html/images/resource/service1-2.jpg"
-                alt=""
-              />
-            </a>
-            <div className="learn">
-              <a className="Learn More " href="">
-                Learn More
-              </a>
+    <div>
+      <div className="">
+        <div className="what_we_do_card">
+          <div className="card_image">
+            <img
+              src={image}
+              alt=""
+            />
+            <div className="overlay"></div>
+          </div>
+          <div className="card_info">
+            <div className="info_content">
+              <div className="icon">
+                <i className=
+                  {icon }></i>
+              </div>
+              <h2>{h2text }</h2>
+              <p>
+                We offer end-to-end Logistics tailored for spesific markets.
+                providing solution
+              </p>
+            </div>
+            <div className="card_learn">
+              <NavLink to={"/"}>
+                Learn More <i className="fa-solid fa-arrow-right"></i>
+              </NavLink>
             </div>
           </div>
-        </div>
-        <div className="card_content">
-          <div className="info_box">icon</div>
         </div>
       </div>
     </div>

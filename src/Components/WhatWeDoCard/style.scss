@@ -1,0 +1,115 @@
+.what_we_do_card {
+  max-width: 370px;
+  width: 100%;
+  min-height: 550px;
+  background-color: #fff;
+  text-align: start;
+  &:hover {
+    .overlay {
+      opacity: 1;
+    }
+
+    img {
+      transform: scale(1.1);
+    }
+  }
+
+  .card_image {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    img {
+      width: 100%;
+
+      transition: transform 0.3s ease;
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, #e30a0a13, #c1bbbb17);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+  }
+
+  .card_info {
+    border-top: 4px solid #df1119;
+    width: 90%;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: -60px;
+    position: relative;
+    background-color: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    gap: 20px;
+    .info_content {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      gap: 30px;
+      //   justify-content: space-between;
+      padding-left: 30px;
+      .icon {
+        width: 90px;
+        height: 90px;
+        background-color: #df1119;
+        color: #fff;
+        font-size: 50px;
+        margin-top: -30px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        i {
+          transform: rotate(-0deg);
+        }
+      }
+      h2 {
+        font-size: 25px;
+        color: #000000;
+      }
+      p {
+        color: var(--p-color);
+      }
+    }
+    .card_learn {
+      height: 60px;
+      width: 100%;
+      border-radius: 10px;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 500;
+      background: linear-gradient(
+        to right,
+        var(--theme-color-light) 50%,
+        var(--theme-color2-dark) 50%
+      );
+      background-size: 200% 100%;
+      background-position: right bottom;
+      transition: all 0.5s ease-out;
+      &:hover {
+        background-position: left bottom;
+      }
+    }
+  }
+}
+@media screen and (max-width: 380px) {
+  .icon {
+    width: 65px !important;
+    height: 65px !important;
+    font-size: 30px !important;
+  }
+}

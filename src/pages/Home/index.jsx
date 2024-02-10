@@ -6,6 +6,7 @@ import FaqsQuestion from "../../Components/FaqsQuestion";
 import NewsSlider from "../../Components/NewsSlider";
 import FastAndSpeedy from "../../Components/FastAndSpeedy";
 import WhatWeDo from "../../Components/WhatWeDo";
+import WhyUS from "../../Components/WhyUs";
 
 function Home() {
   return (
@@ -15,7 +16,9 @@ function Home() {
         {/* <link rel="canonical" href="https://www.tacobell.com/" /> */}
       </Helmet>
       <FastAndSpeedy></FastAndSpeedy>
-      <WhatWeDo></WhatWeDo>
+      <WhatWeDo></WhatWeDo>  
+      <WhyUS></WhyUS>
+
       <HowItsWork />
       <Advantages />
       <FaqsQuestion></FaqsQuestion>

@@ -32,9 +32,9 @@ function Navbar() {
       <nav>
         <div className="navbar">
           <div className="logo">
-            <p>
+            <h3>
               <NavLink to={"/"}>Speedy</NavLink>
-            </p>
+            </h3>
             <span>.</span>
           </div>
           <div className="navbar_pages">
