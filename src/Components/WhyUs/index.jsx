@@ -28,8 +28,27 @@ function WhyUS() {
         <div className="why_us_right">
           <TitleButton text={"Niyə Biz"}></TitleButton>
           <h1>Bütün Növ Kargoların Anında Çatdırılması</h1>
-          <div className="experience">
-            <h1>20 years of experience</h1>
+
+          <div className="experience_container">
+            <div className=" experience">
+              <h1>20</h1>
+            </div>
+            <div className="payment_solution">
+              <div className="payment">
+                <i className="fa-solid fa-hand-holding-dollar"></i>
+                <div className="content">
+                  <h3>Sərfəli ödəniş</h3>
+                  <p>kargolarınızın fiziki çəkiyə uygun olaraq hesablanması </p>
+                </div>
+              </div>
+              <div className="payment">
+                <i className="fa-solid fa-trailer"></i>
+                <div>
+                  <h3>Sürətli çatdırılma</h3>
+                  <p>kargolarının anında və zərər görmədən çatdırılması</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
