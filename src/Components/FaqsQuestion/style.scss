@@ -1,8 +1,35 @@
 #faqs {
-  border: 2px solid black;
   max-width: 100%;
   min-height: 50vh;
-  padding: 6rem 0px;
+  padding: 3rem 0px;
+  border: 2px solid black;
+  min-height: 90vh;
+  // background-image: linear-gradient(to bottom, #1f202ab2, #1f202ab2),
+  //   url("https://html.kodesolution.com/2023/transtex-html/images/background/14.jpg");
+  // background-color: red;
+  position: relative;
+  .overlay {
+    background-image: url("https://html.kodesolution.com/2023/transtex-html/images/icons/icon-plane-4.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 400px;
+    height: 500px;
+    background-position: right;
+    position: absolute;
+    // top: 0;
+    right: 10%;
+    z-index: -1;
+    transition: 900ms;
+    animation: slideDown 40s linear infinite;
+    @keyframes slideDown {
+      100% {
+        background-position: 0 0;
+      }
+      50% {
+        background-position: 0 100%;
+      }
+    }
+  }
   .faqs {
     width: var(--main-section-width);
     margin: 0 auto;
@@ -10,6 +37,7 @@
     flex-direction: column;
     gap: 25px;
     align-items: center;
+
     .faqs_head {
       display: flex;
       width: 100%;
@@ -41,35 +69,42 @@
         }
         .question {
           width: 100%;
-          height: 70px;
-          padding: 10px;
-          background-color: #e6e6ff9c;
-          border-radius: 10px;
+          height: 80px;
+          background-color: #fffafa;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
           display: flex;
-          justify-content: space-between;
+          gap: 20px;
           align-items: center;
-          transition: all 300ms;
-          padding: 0px 20px;
-          border: 2px solid #08478739;
-        }
-
-        p {
-          font-size: 16px;
+          padding: 10px;
+          span {
+            width: 57px;
+            height: 57px;
+            background-color: #f2f3f6;
+            line-height: 57px;
+            font-size: 22px;
+            font-weight: 900;
+            color: #a6a6a6;
+            text-align: center;
+          }
+          p {
+            width: 80%;
+            font-size: 18px;
+            color: #000000;
+            font-weight: 600;
+          }
         }
         .answer {
           width: 100%;
-          min-height: 70px;
-          border-radius: 20px;
+          height: auto;
+          // border-radius: 20px;
           display: flex;
           align-items: center;
           padding: 20px 20px;
-          font-size: 13px;
+          font-size: 14px;
           font-weight: 300;
           line-height: 22px;
-          border: 2px solid #08478739;
-          box-shadow: #0847872a 0px 8px 24px;
-          //   display: none;
-          transition: all 900ms;
+          border: 2px solid #86020240;
+          box-shadow: #e310058d 0px 8px 24px;
         }
       }
     }

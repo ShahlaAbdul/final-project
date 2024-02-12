@@ -35,14 +35,14 @@ function WhyUS() {
             </div>
             <div className="payment_solution">
               <div className="payment">
-                <i className="fa-solid fa-hand-holding-dollar"></i>
+                <i className="fa-solid fa-hand-holding-dollar card_icon"></i>
                 <div className="content">
                   <h3>Sərfəli ödəniş</h3>
                   <p>kargolarınızın fiziki çəkiyə uygun olaraq hesablanması </p>
                 </div>
               </div>
               <div className="payment">
-                <i className="fa-solid fa-trailer"></i>
+                <i className="fa-solid fa-trailer card_icon"></i>
                 <div>
                   <h3>Sürətli çatdırılma</h3>
                   <p>kargolarının anında və zərər görmədən çatdırılması</p>

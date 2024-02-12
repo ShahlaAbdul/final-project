@@ -17,25 +17,41 @@ function FaqsQuestion({ showAll = false }) {
 
   return (
     <section id="faqs">
+      <div className="overlay"></div>
+
       <div className="faqs">
         <div className="faqs_head">
-          <h1> Suallar & Cavablar </h1>
+          <TitleButton text={"Suallar"} />
         </div>
         <div className="faqs_content">
           {filteredData.map((x, index) => (
             <div className="faq_card" key={x.key}>
-              <button
+              <div
                 className=" question"
                 onClick={() => setShow(show === index ? null : index)}
               >
-                <p>{x.question}</p>
+                <span
+                  style={
+                    show === index
+                      ? { backgroundColor: "#df1119", color: "white" }
+                      : {}
+                  }
+                >
+                  {index + 1}
+                </span>
+                <p style={{ color: `${show === index ? "#df1119" : ""}` }}>
+                  {x.question}
+                </p>
+                {/* style={show === index ? { color: "red" } : "blue"} */}
                 <i
                   className={`fa-solid ${
                     show === index ? " fa-chevron-down" : "fa-chevron-right"
                   } `}
                 ></i>
-              </button>
-              {show === index && <p className="answer"> {x.answer} </p>}
+              </div>
+              {show === index && (
+                <p className="answer"> {x.answer.slice(0, 500)} </p>
+              )}
             </div>
           ))}
         </div>
@@ -44,7 +60,7 @@ function FaqsQuestion({ showAll = false }) {
             Daha Cox
           </NavLink>
         </button>
-        <TitleButton text={"daha cox"}></TitleButton>
+        {/* <TitleButton text={"daha cox"}></TitleButton> */}
       </div>
       <div>
         {/* <img src="file:///C:/Users/user/Downloads/airplane.png" alt="" /> */}
