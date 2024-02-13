@@ -1,0 +1,11 @@
+#statistic {
+  max-width: 100%;
+  min-height: 100%;
+  padding: 3rem 0px;
+  .statistic {
+    display: flex;
+    justify-content: space-between;
+    width: var(--main-section-width);
+    margin: 0 auto;
+  }
+}

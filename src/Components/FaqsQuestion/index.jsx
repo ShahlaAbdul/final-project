@@ -17,8 +17,8 @@ function FaqsQuestion({ showAll = false }) {
 
   return (
     <section id="faqs">
-      <div className="overlay"></div>
-
+      <div className="background1"></div>
+      <div className="background2"></div>
       <div className="faqs">
         <div className="faqs_head">
           <TitleButton text={"Suallar"} />

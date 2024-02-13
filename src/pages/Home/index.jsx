@@ -8,6 +8,7 @@ import FastAndSpeedy from "../../Components/FastAndSpeedy";
 import WhatWeDo from "../../Components/WhatWeDo";
 import WhyUS from "../../Components/WhyUs";
 import Providing from "../../Components/Providing";
+import Statistic from "../../Components/Statistic";
 
 function Home() {
   return (
@@ -21,8 +22,9 @@ function Home() {
       <Providing />
       <WhyUS></WhyUS>
       <HowItsWork />
-      <Advantages />
+      <Statistic />
       <FaqsQuestion></FaqsQuestion>
+      <Advantages />
 
       <NewsSlider></NewsSlider>
     </div>

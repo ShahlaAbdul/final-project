@@ -8,10 +8,20 @@
   //   url("https://html.kodesolution.com/2023/transtex-html/images/background/14.jpg");
   // background-color: red;
   position: relative;
-  .overlay {
+  .background1 {
+    background-image: url("https://html.kodesolution.com/2023/transtex-html/images/resource/float-img-4.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  background-position: right;
+  bottom: 0;
+  right: 0;
+
+  }
+  .background2 {
     background-image: url("https://html.kodesolution.com/2023/transtex-html/images/icons/icon-plane-4.png");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100% 70%;
     width: 400px;
     height: 500px;
     background-position: right;
