@@ -42,7 +42,6 @@ function FaqsQuestion({ showAll = false }) {
                 <p style={{ color: `${show === index ? "#df1119" : ""}` }}>
                   {x.question}
                 </p>
-                {/* style={show === index ? { color: "red" } : "blue"} */}
                 <i
                   className={`fa-solid ${
                     show === index ? " fa-chevron-down" : "fa-chevron-right"

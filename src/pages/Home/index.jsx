@@ -9,6 +9,8 @@ import WhatWeDo from "../../Components/WhatWeDo";
 import WhyUS from "../../Components/WhyUs";
 import Providing from "../../Components/Providing";
 import Statistic from "../../Components/Statistic";
+import RequestQuote from "../../Components/RequestQuote";
+import News from "../../Components/News";
 
 function Home() {
   return (
@@ -24,6 +26,9 @@ function Home() {
       <HowItsWork />
       <Statistic />
       <FaqsQuestion></FaqsQuestion>
+      <News></News>
+
+      <RequestQuote />
       <Advantages />
 
       <NewsSlider></NewsSlider>

@@ -29,8 +29,8 @@ function HowItsWork() {
 
           <HowItsWorkCard
             icon={"fa-solid fa-square-check"}
-            h1text={"Qeydiyyatdan keçin"}
-            ptext={"Saytimizda qeydiyyat hissesinden qeydiyyatdan kecin"}
+            h1text={"Sifarişi təsdiq edin"}
+            ptext={"Bağlamanızı sizə yaxın təhvil məntəqəsindən təhvil alın"}
             number={"03"}
           ></HowItsWorkCard>
         </div>

@@ -21,7 +21,6 @@ function FastAndSpeedy() {
         slidesPerView={1}
         navigation
         pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
         loop={true}
         autoplay={{ delay: 4000 }}
         effect={"fade"}

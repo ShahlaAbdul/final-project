@@ -1,7 +1,7 @@
 .what_we_do_card {
   max-width: 370px;
   width: 100%;
-  min-height: 550px;
+  min-height: 600px;
   background-color: #fff;
   text-align: start;
   &:hover {
@@ -40,7 +40,7 @@
   .card_info {
     border-top: 4px solid #df1119;
     width: 90%;
-    height: 280px;
+    height: 320px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -50,12 +50,12 @@
     background-color: #fff;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
       rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    gap: 20px;
+    gap: 10px;
     .info_content {
       display: flex;
       flex-direction: column;
       height: 100%;
-      gap: 30px;
+      gap: 20px;
       //   justify-content: space-between;
       padding-left: 30px;
       .icon {

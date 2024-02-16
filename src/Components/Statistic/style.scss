@@ -1,11 +1,18 @@
 #statistic {
   max-width: 100%;
   min-height: 100%;
-  padding: 3rem 0px;
+  background-color: #f3f4f7;
+  padding: 7rem 0px;
+  background-image: url("https://html.kodesolution.com/2023/transtex-html/images/icons/icon-dots.png");
+  background-position: left;
+  background-repeat: no-repeat;
   .statistic {
-    display: flex;
-    justify-content: space-between;
     width: var(--main-section-width);
+    min-height: 30vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    justify-content: space-between;
     margin: 0 auto;
   }
 }
