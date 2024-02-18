@@ -4,6 +4,7 @@ import "./style.scss";
 function WhyUS() {
   return (
     <section id="why_us">
+      <div className="background"></div>
       <div className="why_us">
         <div className="why_us_left">
           <div className="why_us_image1">

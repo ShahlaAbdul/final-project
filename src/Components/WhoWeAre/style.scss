@@ -1,0 +1,54 @@
+#who_we_are {
+  max-width: 100%;
+  width: 100%;
+  min-height: 40vh;
+  padding: 4rem 0px;
+  position: relative;
+  .background {
+    background-image: url("https://html.kodesolution.com/2023/transtex-html/images/icons/icon-container.png");
+    width: 40%;
+    height: 60%;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    position: absolute;
+    top: 40%;
+    left: 10px;
+    animation: moveBackground 15s linear infinite alternate;
+    @keyframes moveBackground {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 100% 0;
+      }
+    }
+  }
+  .who_we_are {
+    width: var(--main-section-width);
+    margin: 0 auto;
+    position: relative;
+
+    .head {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 2rem 0px;
+    }
+    .content {
+      padding: 4rem 0px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .content_text {
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .content_img {
+        width: 600px;
+        height: 500px;
+      }
+    }
+  }
+}

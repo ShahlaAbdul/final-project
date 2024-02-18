@@ -1,0 +1,23 @@
+#not_found {
+  max-width: 100%;
+  min-height: 40vh;
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0px;
+  .not_found {
+    width: var(--main-section-width);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    text-align: center;
+    h1 {
+      font-size: 60px;
+    }
+    p {
+      font-size: 20px;
+      max-width: 500px;
+    }
+  }
+}

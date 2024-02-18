@@ -10,13 +10,12 @@
   position: relative;
   .background1 {
     background-image: url("https://html.kodesolution.com/2023/transtex-html/images/resource/float-img-4.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: absolute;
-  background-position: right;
-  bottom: 0;
-  right: 0;
-
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    background-position: right;
+    bottom: 0;
+    right: 0;
   }
   .background2 {
     background-image: url("https://html.kodesolution.com/2023/transtex-html/images/icons/icon-plane-4.png");
@@ -71,7 +70,7 @@
         flex-direction: column;
         gap: 10px;
         align-items: center;
-        transition: all 900ms;
+        transition: all 0.5s ease-in-out;
 
         i {
           color: #08478770;
@@ -86,6 +85,7 @@
           gap: 20px;
           align-items: center;
           padding: 10px;
+          transition: all 0.6s ease-in-out;
           span {
             width: 57px;
             height: 57px;
@@ -115,6 +115,7 @@
           line-height: 22px;
           border: 2px solid #86020240;
           box-shadow: #e310058d 0px 8px 24px;
+          transition: all 0.6s ease-out;
         }
       }
     }

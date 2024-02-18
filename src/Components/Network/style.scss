@@ -1,21 +1,24 @@
 #network {
   max-width: 100%;
   min-height: 100%;
+  background-color: white;
   .network {
     width: var(--main-section-width);
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 30px;
-    .network_map {
-    }
+
     .network_filials {
-      display: grid;
-      grid-template-columns: auto auto;
+      display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       gap: 30px;
-      max-width: 100%;
+      width: 100%;
       .filial {
+        max-width: 100%;
+        width: 500px;
+        height: auto;
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -26,15 +29,19 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
-          padding: 0px 10px;
+          padding: 0px 30px;
           font-size: 18px;
           font-weight: 600;
+          gap: 40px;
+          width: 100%;
         }
         .filial_content {
+          padding: 0 30px;
           display: flex;
           // display: none;
           flex-direction: column;
           gap: 20px;
+          transition: all 0.5s ease-in-out;
           .name {
             display: flex;
             color: var(--theme-color-light);
@@ -47,8 +54,10 @@
             gap: 10px;
             font-size: 18px;
             font-weight: 600;
+            align-items: center;
             i {
               color: var(--theme-color-light) !important;
+              cursor: pointer;
             }
           }
           .work_hours {

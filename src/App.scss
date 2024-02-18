@@ -47,7 +47,7 @@ body {
     line-height: 96px;
     border-radius: 50%;
     transition: 700ms;
-    &:hover{
+    &:hover {
       transform: rotateY(180deg);
     }
     // &:hover {
@@ -57,3 +57,23 @@ body {
     // }
   }
 }
+::-webkit-scrollbar {
+  width: 16px;
+  // margin-right: 5px; /* Scroll çubuğu genişliği */
+}
+
+/* Scroll çubuğunun arka plan rengi */
+::-webkit-scrollbar-track {
+  background: #ffffffd1; /* Arka plan rengi */
+}
+
+/* Scroll çubuğunun kaydırma alanı (thumb) rengi */
+::-webkit-scrollbar-thumb {
+  background: #e22020; /* Kaydırma alanı rengi */
+}
+
+/* Aktif (tıklanmış) scroll çubuğunun kaydırma alanı (thumb) rengi */
+::-webkit-scrollbar-thumb:hover {
+  background: #bf1c1c; /* Aktif (tıklanmış) kaydırma alanı rengi */
+}
+

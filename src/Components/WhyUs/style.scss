@@ -1,22 +1,22 @@
 #why_us {
-  background-color: #ada6a634;
+  // background-color: #ada6a634;
   max-width: 100%;
   min-height: 80vh;
   padding: 4rem 0px;
-  border: 3px solid black;
-  .why_us {
-    width: var(--main-section-width);
-    min-height: 90vh;
-    gap: 30px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
+  position: relative;
+  .background {
+    position: absolute;
+    z-index: -1;
+    width: 300px;
+    height: 600px;
     background-image: url("https://html.kodesolution.com/2023/transtex-html/images/icons/icon-plane-4.png");
     background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size: 100% 70%;
+    background-position: center;
+    background-size: contain;
     animation: slideDown 40s linear infinite;
-    @keyframes slideDown {  
+    top: 0;
+    right: 100px;
+    @keyframes slideDown {
       100% {
         background-position: 0 0;
       }
@@ -24,6 +24,15 @@
         background-position: 0 100%;
       }
     }
+  }
+  .why_us {
+    width: var(--main-section-width);
+    min-height: 90vh;
+    gap: 30px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
     .why_us_left {
       display: flex;
       max-height: 500px;
@@ -90,7 +99,7 @@
           position: relative;
           h1 {
             font-size: 110px;
-            -webkit-background-clip: text;
+            // -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-image: url("https://html.kodesolution.com/2023/transtex-html/images/resource/count1-1.jpg");
             margin-bottom: 0;

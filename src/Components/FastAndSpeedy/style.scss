@@ -1,18 +1,22 @@
 #fast_and_speedy {
   max-width: 100%;
-  min-height: 100vh;
-  margin-top: -35px;
-  z-index: -1;
+  min-height: 110vh;
+  margin-top: -105px;
+  position: relative;
 }
 .fast_and_speedy {
   width: 100%;
-  height: 100%; /* Ebeveyn elementlere bağlı olarak 100% yükseklik */
+  height: 100%;
+  position: absolute;
+  // z-index: -1;
+
+  /* Ebeveyn elementlere bağlı olarak 100% yükseklik */
 }
 
 /* Swiper slide */
 .slide {
   width: 100%;
-  height: 100vh;
+  height: 110vh;
   display: flex;
   color: #00000091;
   justify-content: center;
@@ -34,7 +38,7 @@
     .text_content {
       position: absolute;
       gap: 30px;
-      top: 50%;
+      top: 60%;
       left: 50%;
       transform: translate(-50%, -50%);
       opacity: 0;

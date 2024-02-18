@@ -29,7 +29,7 @@ function FastAndSpeedy() {
           className="slide"
           style={{
             backgroundImage:
-              'linear-gradient(to right,  #1e0000be, #230101c4), url("https://media.istockphoto.com/id/1295970440/photo/portrait-of-smiling-couple-renters-relocate-to-new-home.jpg?s=2048x2048&w=is&k=20&c=DEtn-g38SB-JW371Yy_yJXWlGmPxC3SZqEJhEAThanM=")',
+              'linear-gradient(to right,  #040101c2, #040101c2), url("https://media.istockphoto.com/id/1295970440/photo/portrait-of-smiling-couple-renters-relocate-to-new-home.jpg?s=2048x2048&w=is&k=20&c=DEtn-g38SB-JW371Yy_yJXWlGmPxC3SZqEJhEAThanM=")',
           }}
         >
           <div className="fast_cargo">
@@ -53,7 +53,7 @@ function FastAndSpeedy() {
           className="slide"
           style={{
             backgroundImage:
-              'linear-gradient(to bottom, #1e0000be, #1e0000be), url("https://media.istockphoto.com/id/1163329807/photo/delivery-young-man-standing-at-the-door-of-home-and-carrying-parcels-for-young-male-to-signing.jpg?s=2048x2048&w=is&k=20&c=TN2osBpUCFdfwsIZse4P_zTkq3HieG7xUx7k1u6-qo8=")',
+              'linear-gradient(to bottom, #040101c2, #040101c2), url("https://media.istockphoto.com/id/1163329807/photo/delivery-young-man-standing-at-the-door-of-home-and-carrying-parcels-for-young-male-to-signing.jpg?s=2048x2048&w=is&k=20&c=TN2osBpUCFdfwsIZse4P_zTkq3HieG7xUx7k1u6-qo8=")',
           }}
         >
           <div className="fast_cargo">
@@ -76,7 +76,7 @@ function FastAndSpeedy() {
           className="slide"
           style={{
             backgroundImage:
-              'linear-gradient(to bottom,  #350202b4, #350202b4), url("https://media.istockphoto.com/id/1447292368/photo/close-up-view-of-delivery-man-organizing-packages-before-handing-package-to-customers.jpg?s=2048x2048&w=is&k=20&c=7NajBt_UczvflAn1-B-feKpgONfVv1c-x6HRnjk5uIA=")',
+              'linear-gradient(to bottom,  #040101c2, #040101c2), url("https://media.istockphoto.com/id/1447292368/photo/close-up-view-of-delivery-man-organizing-packages-before-handing-package-to-customers.jpg?s=2048x2048&w=is&k=20&c=7NajBt_UczvflAn1-B-feKpgONfVv1c-x6HRnjk5uIA=")',
           }}
         >
           <div className="fast_cargo">
