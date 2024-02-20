@@ -1,0 +1,51 @@
+#news_add {
+  max-width: var(--main-section-width);
+  margin: 0 auto;
+  padding: 3rem 0px;
+
+  h1 {
+    padding: 20px 0px;
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+  .news_add {
+    width: 100%;
+    // border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: end;
+
+    .form_sec {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      label {
+        color: rgb(46, 45, 45);
+        font-size: 20px;
+      }
+      .field_textarea {
+        width: 600px;
+        min-height: 200px;
+        border: none;
+        padding: 0px 20px;
+        border-radius: 6px;
+        background-color: #8eadce37;
+        outline: none;
+      }
+      .field {
+        width: 500px;
+        height: 70px;
+        border: none;
+        padding: 0px 20px;
+        border-radius: 6px;
+        background-color: #8eadce37;
+        outline: none;
+        &.error {
+          color: red;
+        }
+      }
+    }
+  }
+}

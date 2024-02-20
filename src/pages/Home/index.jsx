@@ -3,7 +3,6 @@ import "./style.scss";
 import HowItsWork from "../../Components/HowItsWork";
 import Advantages from "../../Components/Advantages";
 import FaqsQuestion from "../../Components/FaqsQuestion";
-import NewsSlider from "../../Components/NewsSlider";
 import FastAndSpeedy from "../../Components/FastAndSpeedy";
 import WhatWeDo from "../../Components/WhatWeDo";
 import WhyUS from "../../Components/WhyUs";
@@ -30,8 +29,6 @@ function Home() {
 
       <RequestQuote />
       <Advantages />
-
-      <NewsSlider></NewsSlider>
     </div>
   );
 }

@@ -5,7 +5,7 @@ function SectionHead({ bgImage, ptext, head }) {
     <section
       id="section_head"
       style={{
-        backgroundImage: `url(${bgImage})`,
+        backgroundImage: ` url(${bgImage})`,
       }}
     >
       <div className="section_head">

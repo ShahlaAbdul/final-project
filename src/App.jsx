@@ -7,6 +7,12 @@ import Faqs from "./pages/Faqs";
 import NetworkPage from "./pages/NetworkPage";
 import About from "./pages/AboutUS";
 import Page404 from "./pages/Page404";
+import Contact from "./pages/Contact";
+import NewsPage from "./pages/NewsPage";
+import AdminPanel from "./pages/AdminPanel";
+import NewsPanel from "./pages/NewsPanel";
+import NewsUpdate from "./pages/NewsUpdate";
+// import ServicesPanel from "./pages/ServicesPanel";
 function App() {
   return (
     <BrowserRouter>
@@ -17,6 +23,12 @@ function App() {
           <Route path="/stores" element={<Stores />} />;
           <Route path="/faq" element={<Faqs />} />;
           <Route path="/about" element={<About />} />;
+          <Route path="/contact" element={<Contact />} />;
+          <Route path="/news" element={<NewsPage />} />;
+          <Route path="/admin_panel" element={<AdminPanel />} />;
+          <Route path="news_panel" element={<NewsPanel />} />;
+          <Route path="/news_panel/edit/:id" element={<NewsUpdate />} />;
+          {/* <Route path="services_panel" element={<ServicesPanel />} />; */}
         </Route>
         <Route path="404" element={<Page404 />} />;
       </Routes>
