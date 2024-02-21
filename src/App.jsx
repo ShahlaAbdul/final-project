@@ -12,6 +12,9 @@ import NewsPage from "./pages/NewsPage";
 import AdminPanel from "./pages/AdminPanel";
 import NewsPanel from "./pages/NewsPanel";
 import NewsUpdate from "./pages/NewsUpdate";
+import ServicesPanel from "./pages/ServicesPanel";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
 // import ServicesPanel from "./pages/ServicesPanel";
 function App() {
   return (
@@ -28,9 +31,11 @@ function App() {
           <Route path="/admin_panel" element={<AdminPanel />} />;
           <Route path="news_panel" element={<NewsPanel />} />;
           <Route path="/news_panel/edit/:id" element={<NewsUpdate />} />;
-          {/* <Route path="services_panel" element={<ServicesPanel />} />; */}
+          <Route path="/services_panel" element={<ServicesPanel />} />;
+          <Route path="/user/login" element={<LoginPage />} />;
+          <Route path="/user/register" element={<RegisterPage />} />;
         </Route>
-        <Route path="404" element={<Page404 />} />;
+        <Route path="/404" element={<Page404 />} />;
       </Routes>
     </BrowserRouter>
   );
