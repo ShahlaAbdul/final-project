@@ -57,7 +57,7 @@
       height: 100%;
       gap: 20px;
       //   justify-content: space-between;
-      padding-left: 30px;
+      padding: 0px 30px;
       .icon {
         width: 90px;
         height: 90px;
@@ -106,10 +106,31 @@
     }
   }
 }
-@media screen and (max-width: 380px) {
-  .icon {
-    width: 65px !important;
-    height: 65px !important;
-    font-size: 30px !important;
+// @media screen and (max-width: 380px) {
+//   .info_content h2 {
+//     font-size: 12px;
+//   }
+//   .icon {
+//     width: 65px !important;
+//     height: 65px !important;
+//     font-size: 30px !important;
+//   }
+// }
+@media only screen and (min-width: 320px) and (max-width: 500px) {
+  .info_content {
+    padding: 5px !important;
+    .icon {
+      width: 65px !important;
+      height: 65px !important;
+      font-size: 30px !important;
+    }
+    h2 {
+      font-size: 20px !important;
+    }
+    p {
+      line-height: 20px !important;
+      font-size: 12px;
+      width: 100% !important;
+    }
   }
 }

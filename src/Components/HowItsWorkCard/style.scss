@@ -2,21 +2,18 @@
   width: 250px;
   min-height: 420px;
   border-radius: 200px;
-  //   border: 2px solid black;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   text-align: center;
   background-color: #050c11;
-  padding: 40px;
+  padding: 30px;
   position: relative;
   .img {
-    border: 2px solid black;
     margin-top: -70px;
     color: var(--theme-color-light);
     display: flex;
-    gap: 20px;
     background-image: url("https://html.kodesolution.com/2023/transtex-html/images/icons/icon-border-2.png");
     background-size: contain;
     background-position: right;
@@ -27,15 +24,10 @@
     align-items: center;
     .card_icon {
       background-color: var(--main-theme-light);
-      // &:hover {
-      //   transform: rotateY(180deg);
-      //   background-color: var(--theme-color-light);
-      //   color: #fff;
-      // }
     }
   }
   p {
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 0.6px;
   }
   .number {

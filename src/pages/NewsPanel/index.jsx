@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
-import "./style.scss";
 import SectionHead from "../../Components/SectionHead";
+import "./style.scss";
 import bgImage from "../../assets/Images/finalSectionBg2.jpg";
 import NewsPanelFormik from "../../Components/NewspanelFormik";
 import NewsTable from "../../Components/NewsTable";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function NewsPanel() {
@@ -15,14 +15,14 @@ function NewsPanel() {
   }, []);
 
   function getAll() {
-    fetch("http://localhost:3200/news/")
+    fetch("http://localhost:3200/api/news/")
       .then((res) => res.json())
       .then((data) => setNewsPanel(data))
       .catch(() => console.log("not connected"));
   }
 
   const handleAdd = (formData) => {
-    fetch("http://localhost:3200/news/", {
+    fetch("http://localhost:3200/api/news/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -33,7 +33,7 @@ function NewsPanel() {
       .then(() => console.log("Data sent to server:"));
   };
   function handleDelete(id) {
-    fetch("http://localhost:3200/news/" + id, { method: "DELETE" })
+    fetch("http://localhost:3200/api/news/" + id, { method: "DELETE" })
       .then((res) => res.json())
       .then(() => {
         getAll();

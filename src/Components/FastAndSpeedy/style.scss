@@ -30,7 +30,7 @@
     max-width: 90%;
     width: 600px;
     margin: 0 auto;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,7 +56,7 @@
       }
     }
     h1 {
-      font-size: 70px;
+      font-size: 50px;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
     p {
@@ -102,4 +102,26 @@
 /* Aktif slayt */
 .swiper-slide.swiper-slide-active {
   transform: scale(1.1); /* Aktif slaytı büyüt */
+}
+@media only screen and (max-width: 1220px) {
+  .text_content {
+    h1 {
+      font-size: 30px !important;
+    }
+    p {
+      font-size: 14px !important;
+    }
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 800px) {
+  .text_content {
+    width: 80% !important;
+    h1 {
+      font-size: 20px !important;
+    }
+    p {
+      font-size: 12px !important;
+      line-height: 25px !important;
+    }
+  }
 }

@@ -1,35 +1,65 @@
-import { ErrorMessage, Field, Formik } from "formik";
+/* eslint-disable react/prop-types */
+import { ErrorMessage, Field, Formik, Form } from "formik";
 import TitleButton from "../TitleButton";
-import { Form } from "react-router-dom";
 import * as Yup from "yup";
 import "./style.scss";
 import Button1 from "../Button1";
-
+import { useContext } from "react";
+import { UserContext } from "../../Context/userContext";
 
 const validationSchema = Yup.object().shape({
   filial: Yup.string(),
-    location: Yup.string(),
-    call: Yup.string(),
+  location: Yup.string(),
+  call: Yup.string(),
   hours: Yup.object().shape({
     weekly: Yup.string(),
     weekend: Yup.string(),
   }),
 });
 
-function ServicesFormik({ initialValues, onSubmit }) {
+function ServicesFormik() {
+  const { token, decode, addToken, logOut } = useContext(UserContext);
+  
   return (
-    <section id="news_add">
+    <section id="update_table">
       <Formik
-        initialValues={initialValues}
+        initialValues={{
+          filial: "",
+          location: "",
+          call: "",
+          hours: {
+            weekly: "",
+            weekend: "",
+          },
+        }}
         validationSchema={validationSchema}
-        onSubmit={onSubmit}
+        onSubmit={(values, { setSubmitting, resetForm }) => {
+                    setTimeout(() => {
+                     
+                        console.log(values);
+                        fetch("http://localhost:3000/booking/",
+                            {
+                                method: "POST",
+                                headers: {
+                                    'Accept': 'application/json',
+                                    'Content-Type': 'application/json',
+                                    'Authorization': `${token}`
+                                },
+                                body: JSON.stringify(values)
+                            })
+                            .then(function (res) { console.log(res) })
+                            .catch(function (res) { console.log(res) })
+                        setSubmitting(false);
+                        resetForm();
+                    }, 400);
+                }}
       >
         <div>
-          <TitleButton text={"add Filials"} />
+          <TitleButton text={"add Filial"} />
           <h1>Yeni Filial əlavə et</h1>
-          <Form className="news_add">
+          <Form className="update_table">
             <div className="form_sec">
-              <label htmlFor="filial">filial</label>
+              <label htmlFor="filial"> filial</label>
               <Field
                 className="field"
                 name="filial"
@@ -47,20 +77,19 @@ function ServicesFormik({ initialValues, onSubmit }) {
                 type="text"
                 placeholder="location"
               />
-              <ErrorMessage name="date" />
+              <ErrorMessage name="location" />
             </div>
 
             <div className="form_sec">
-              <label htmlFor="call">Call</label>
+              <label htmlFor="call">call</label>
               <Field
                 className="field"
                 name="call"
                 type="text"
-                placeholder="content ending"
+                placeholder="call"
               />
               <ErrorMessage name="call" />
             </div>
-
             <div className="form_sec">
               <label htmlFor="hours.weekly">hours weekly</label>
               <Field
@@ -69,6 +98,7 @@ function ServicesFormik({ initialValues, onSubmit }) {
                 type="text"
                 placeholder="hours weekly"
               />
+              <ErrorMessage name="hours.weekly" />
             </div>
 
             <div className="form_sec">
@@ -81,7 +111,6 @@ function ServicesFormik({ initialValues, onSubmit }) {
               />
               <ErrorMessage name="hours.weekend" />
             </div>
-
             <Button1 text={"Əlavə et"} onSubmit={onSubmit} />
           </Form>
         </div>

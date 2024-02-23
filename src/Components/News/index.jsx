@@ -3,21 +3,12 @@ import TitleButton from "../TitleButton";
 import "./style.scss";
 function News() {
   const [fetchNews, setFetchNews] = useState([]);
-  const [hoverDirection, setHoverDirection] = useState("right");
 
   useEffect(() => {
-    fetch("http://localhost:3200/news")
+    fetch("http://localhost:3200/api/news")
       .then((res) => res.json())
       .then((data) => setFetchNews(data));
   }, []);
-
-  const handleHover = (event) =>
-    setHoverDirection(
-      event.clientX - event.currentTarget.getBoundingClientRect().left >
-        event.currentTarget.offsetWidth / 2
-        ? "right"
-        : "left"
-    );
 
   return (
     <section id="news">
@@ -27,19 +18,15 @@ function News() {
         </div>
         <div className="news_content">
           {fetchNews.map((x) => (
-            <div
-              className="news_card"
-              key={x._id}
-              style={{ backgroundImage: `url(${x.image})` }}
-              onMouseOver={handleHover}
-            >
-              <div className={`news_card_overlay ${hoverDirection}`}>
-                <i className="fas fa-search"></i>
-              </div>
+            <div className="news_card" key={x._id}>
               <ul>
-                {/* <li>{x.head}</li>
+                <img src={x.image} alt="" />
+
+                <li className="head">{x.head}</li>
                 <li>{x.date}</li>
-                <li>{x.content.ending}</li> */}
+                <li>
+                  <p>{x.content.title.slice(0, 156)} </p>
+                </li>
               </ul>
             </div>
           ))}

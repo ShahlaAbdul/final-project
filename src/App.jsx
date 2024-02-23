@@ -15,6 +15,11 @@ import NewsUpdate from "./pages/NewsUpdate";
 import ServicesPanel from "./pages/ServicesPanel";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
+import UserProfile from "./pages/UserProfile";
+import UsersPanel from "./pages/UsersPanel";
+import UserEdit from "./pages/UserUpdate";
+import Calculator from "./pages/Calculator";
+import CorporateDetail from "./pages/CorporateDetail";
 // import ServicesPanel from "./pages/ServicesPanel";
 function App() {
   return (
@@ -34,6 +39,11 @@ function App() {
           <Route path="/services_panel" element={<ServicesPanel />} />;
           <Route path="/user/login" element={<LoginPage />} />;
           <Route path="/user/register" element={<RegisterPage />} />;
+          <Route path="/user/profile" element={<UserProfile />} />;
+          <Route path="/users_panel" element={<UsersPanel />} />;
+          <Route path="/user/edit/:id" element={<UserEdit />} />;
+          <Route path="/calculator" element={<Calculator />} />;
+          <Route path="corporate/detail/:id" element={<CorporateDetail />} />;
         </Route>
         <Route path="/404" element={<Page404 />} />;
       </Routes>

@@ -17,7 +17,7 @@ const validationSchema = Yup.object().shape({
 // eslint-disable-next-line react/prop-types
 function NewsPanelFormik({ onSubmit, initialValues }) {
   return (
-    <section id="news_add">
+    <section id="update_table">
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
@@ -26,7 +26,7 @@ function NewsPanelFormik({ onSubmit, initialValues }) {
         <div>
           <TitleButton text={"add News"} />
           <h1>Yeni Xəbər əlavə et</h1>
-          <Form className="news_add">
+          <Form className="update_table">
             <div className="form_sec">
               <label htmlFor="image"> image</label>
               <Field

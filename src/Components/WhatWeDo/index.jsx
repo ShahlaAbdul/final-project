@@ -1,7 +1,16 @@
+import { useEffect, useState } from "react";
 import TitleButton from "../TitleButton";
 import WhatWeDoCard from "../WhatWeDoCard";
 import "./style.scss";
+import CorporateDetail from "../../pages/CorporateDetail";
 function WhatWeDo() {
+  const [corporateData, setCorporateData] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:3200/api/corporate")
+      .then((res) => res.json())
+      .then((data) => setCorporateData(data));
+  }, []);
+
   return (
     <section id="what_we_do">
       <div className="what_we_do">
@@ -10,36 +19,18 @@ function WhatWeDo() {
           <h1>Koorporativ xidmətlərimiz</h1>
         </div>
         <div className="what_we_do_cards">
-          <WhatWeDoCard
-            image={
-              "https://html.kodesolution.com/2023/transtex-html/images/resource/service2-3.jpg"
-            }
-            icon={"fa-solid fa-bus"}
-            h2text={"Quru yolu nəqliyyatı"}
-            ptext={
-              "Bizə müraciət edərək Speedy-nin çoxsaylı avtomobil şəbəkəsindən yararlana, yüklərinizin idxal və ixrac əməlyatlarınızı icra edə bilərsiniz."
-            }
-          ></WhatWeDoCard>
-          <WhatWeDoCard
-            image={
-              "https://html.kodesolution.com/2023/transtex-html/images/resource/service2-2.jpg"
-            }
-            icon={"fa-solid fa-plane"}
-            h2text={"Hava nəqliyyatı "}
-            ptext={
-              "Speedy-nin bu xidmətindən istifadə edərək dünyanın hər hansı bir hava limanından Azərbaycana idxal və ixrac əməlyatlarını həyata keçirə bilərsiniz."
-            }
-          ></WhatWeDoCard>
-          <WhatWeDoCard
-            image={
-              "https://html.kodesolution.com/2023/transtex-html/images/resource/service2-1.jpg"
-            }
-            icon={"fa-solid fa-ship"}
-            h2text={"Dəniz nəqliyyatı "}
-            ptext={
-              "Speedy ilə əməkdaşlıq edərək dünyanın hər hansı bir limanı ilə idxal ixrac əməliyyatlarınızı həyata keçirə bilərsiniz."
-            }
-          ></WhatWeDoCard>
+          {corporateData.map((item) => (
+            <div className="card" key={item._id}>
+              <WhatWeDoCard
+                key={item._id}
+                itemId={item._id}
+                image={item.image}
+                icon={"fa-solid fa-bus"}
+                h2text={item.head}
+                ptext={item.title.slice(0, 200)}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>

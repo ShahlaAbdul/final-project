@@ -1,7 +1,7 @@
 import "./style.scss";
 import { NavLink } from "react-router-dom";
 // eslint-disable-next-line react/prop-types
-function WhatWeDoCard({ image, icon, h2text, ptext }) {
+function WhatWeDoCard({ image, icon, h2text, ptext, itemId }) {
   return (
     <div>
       <div className="">
@@ -19,7 +19,7 @@ function WhatWeDoCard({ image, icon, h2text, ptext }) {
               <p>{ptext}</p>
             </div>
             <div className="card_learn">
-              <NavLink to={"/"}>
+              <NavLink to={`/corporate/detail/${itemId}`}>
                 Learn More <i className="fa-solid fa-arrow-right"></i>
               </NavLink>
             </div>

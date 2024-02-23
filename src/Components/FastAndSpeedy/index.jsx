@@ -8,10 +8,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { Link } from "react-router-dom";
 
 function FastAndSpeedy() {
-  //   SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
-
   return (
     <section id="fast_and_speedy">
       <Swiper
@@ -43,8 +42,12 @@ function FastAndSpeedy() {
                 Expargo sizin xidmətinizdədir.
               </p>
               <div className="buttons">
-                <button className="qeydiyyat">qeydiyyat</button>
-                <button className="daxilol">Daxil ol</button>
+                <Link to={"/user/register"}>
+                  <button className="qeydiyyat">qeydiyyat</button>
+                </Link>
+                <Link to={"/user/login"}>
+                  <button className="daxilol">Daxil ol</button>
+                </Link>
               </div>
             </div>
           </div>
@@ -66,8 +69,12 @@ function FastAndSpeedy() {
                 sifarişlər edin. bir Addimda qapinizda
               </p>
               <div className="buttons">
-                <button className="qeydiyyat">qeydiyyat</button>
-                <button className="daxilol">Daxil ol</button>
+                <Link to={"/user/register"}>
+                  <button className="qeydiyyat">qeydiyyat</button>
+                </Link>
+                <Link to={"/user/login"}>
+                  <button className="daxilol">Daxil ol</button>
+                </Link>
               </div>
             </div>
           </div>
@@ -89,8 +96,12 @@ function FastAndSpeedy() {
                 sifariş üçün Dynamex-i seçin. Çox sadə, çox professional.
               </p>
               <div className="buttons">
-                <button className="qeydiyyat">qeydiyyat</button>
-                <button className="daxilol">Daxil ol</button>
+                <Link to={"/user/register"}>
+                  <button className="qeydiyyat">qeydiyyat</button>
+                </Link>
+                <Link to={"/user/login"}>
+                  <button className="daxilol">Daxil ol</button>
+                </Link>
               </div>
             </div>
           </div>

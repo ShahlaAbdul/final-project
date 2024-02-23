@@ -43,3 +43,8 @@
     background-image: none;
   }
 }
+@media screen and (max-width: 960px) {
+  .what_we_do_cards {
+    justify-content: center !important;
+  }
+}

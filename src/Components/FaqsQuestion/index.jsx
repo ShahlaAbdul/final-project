@@ -10,7 +10,7 @@ function FaqsQuestion({ showAll = false }) {
   const filteredData = showAll ? faqData : faqData.slice(0, faqData.length / 3);
 
   useEffect(() => {
-    fetch("http://localhost:3200/faq")
+    fetch("http://localhost:3200/api/faq")
       .then((res) => res.json())
       .then((data) => setFaqData(data));
   }, []);

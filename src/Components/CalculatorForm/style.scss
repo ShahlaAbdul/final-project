@@ -1,0 +1,121 @@
+#calculator {
+  max-width: 100%;
+  min-height: 100%;
+  padding: 4rem 0px;
+  .calculator {
+    width: var(--main-section-width);
+    min-height: 40vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 60px;
+    select,
+    input {
+      height: 55px;
+      border-radius: 7px;
+      outline: none;
+      background-color: #144efa22;
+      border: none;
+      padding: 0px 10px;
+    }
+
+    .selections {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      select {
+        font-size: 16px;
+        option {
+          background-color: #fff;
+        }
+      }
+    }
+    .calculator_form,
+    .currency {
+      box-shadow: #0000003d 0px 3px 8px;
+      border-radius: 7px;
+      padding: 10px;
+      width: 40%;
+    }
+    .calculator_form {
+      select,
+      input {
+        width: 100%;
+      }
+      width: 50%;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        line-height: 40px;
+        width: 100%;
+        label {
+          color: var(--theme-color-light);
+          font-weight: 900;
+          font-size: 20px;
+        }
+      }
+      .total_submit {
+        display: flex;
+        justify-content: space-between;
+        .total {
+          width: 50%;
+          height: 50px;
+          border-radius: 7px;
+          outline: none;
+          background-color: #144efa22;
+          border: none;
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          p {
+            border-right: 2px solid rgba(115, 126, 145, 0.573);
+            padding: 0px 10px;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    .currency {
+      .currency_form {
+        display: flex;
+        flex-direction: column;
+        line-height: 80px;
+        width: 100%;
+        gap: 20px;
+        //   border: 2px solid black;
+        .converte {
+          display: flex;
+          gap: 10px;
+          input {
+            width: 80%;
+          }
+        }
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          //   background-color: blue;
+          border-bottom: 1px solid #3451e358;
+          padding: 10px;
+          .img {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            img {
+            }
+          }
+        }
+      }
+    }
+  }
+}

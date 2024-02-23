@@ -6,7 +6,7 @@ function Network() {
   const [showFilial, setShowFilial] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:3200/services/")
+    fetch("http://localhost:3200/api/services/")
       .then((res) => res.json())
       .then((data) => setServiceData(data));
   }, []);
@@ -52,16 +52,16 @@ function Network() {
                     </NavLink>
                   </div>
                   {/* location */}
-                    <NavLink
-                      to={
-                        "https://www.google.com/maps/place//data=!4m2!3m1!1s0x40307d1227607ab7:0x9a57b16206776b50?source=g.page.m.nr._"
-                      }
-                    >
-                  <div className="location">
+                  <NavLink
+                    to={
+                      "https://www.google.com/maps/place//data=!4m2!3m1!1s0x40307d1227607ab7:0x9a57b16206776b50?source=g.page.m.nr._"
+                    }
+                  >
+                    <div className="location">
                       <i className="fa-solid fa-location-dot"></i>
                       <span>{x.location}</span>
-                  </div>
-                    </NavLink>
+                    </div>
+                  </NavLink>
                   {/* work hours; */}
                   <div className="work_hours">
                     <span>İş saatları:</span>
