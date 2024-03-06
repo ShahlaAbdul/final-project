@@ -22,15 +22,15 @@ function NewsPanel() {
   }
 
   const handleAdd = (formData) => {
-    fetch("http://localhost:3200/api/news/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    })
-      .then((response) => response.json())
-      .then(() => console.log("Data sent to server:"));
+   fetch("http://localhost:3200/api/news", {
+     method: "POST",
+     body: JSON.stringify(formData),
+     headers: {
+       "Content-Type": "application/json",
+     },
+   })
+     .then((response) => response.json())
+     .then(() => console.log("Data sent to server:"));
   };
   function handleDelete(id) {
     fetch("http://localhost:3200/api/news/" + id, { method: "DELETE" })
@@ -47,6 +47,10 @@ function NewsPanel() {
     <div>
       <SectionHead ptext={"NewsPanel"} bgImage={bgImage} head={"News Panel"} />
       <NewsPanelFormik onSubmit={handleAdd} />
+
+      <div>
+        
+    </div>
       <NewsTable
         newsPanel={newsPanel}
         handleDelete={handleDelete}

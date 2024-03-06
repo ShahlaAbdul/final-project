@@ -14,14 +14,14 @@ function ServicesPanel() {
   }, []);
 
   function getAll() {
-    fetch("http://localhost:3200/api/services/")
+    fetch("http://localhost:3200/api/services")
       .then((res) => res.json())
       .then((data) => setServicesPanel(data))
       .catch(() => console.log("not connected"));
   }
 
   const handleAdd = (formData) => {
-    fetch("http://localhost:3200/api/services/", {
+    fetch("http://localhost:3200/api/services", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

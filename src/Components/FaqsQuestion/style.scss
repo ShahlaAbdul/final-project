@@ -138,3 +138,18 @@
     // }
   }
 }
+@media only screen and (max-width: 608px) {
+  .question {
+    p {
+      font-size: 14px !important;
+      line-height: 15px !important;
+    }
+  }
+}
+@media only screen and (max-width: 420px) {
+  .question {
+    p {
+      font-size: 10px !important;
+    }
+  }
+}

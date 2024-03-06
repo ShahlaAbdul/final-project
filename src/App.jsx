@@ -45,7 +45,7 @@ function App() {
           <Route path="/calculator" element={<Calculator />} />;
           <Route path="corporate/detail/:id" element={<CorporateDetail />} />;
         </Route>
-        <Route path="/404" element={<Page404 />} />;
+        <Route path="*" element={<Page404 />} />;
       </Routes>
     </BrowserRouter>
   );

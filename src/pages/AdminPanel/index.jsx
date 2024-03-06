@@ -15,24 +15,30 @@ function AdminPanel() {
         <div className="admin_panel">
           <div className="select">
             <ul>
-              <NavLink to={"/newspanel"}>
+              <NavLink to={"/news_panel"}>
                 <li>
                   <span>News</span>
                   <i className="fa-solid fa-chevron-right"></i>
                 </li>
               </NavLink>
-              <li>
-                <span>Services</span>
-                <i className="fa-solid fa-chevron-right"></i>
-              </li>
-              <li>
-                <span>Faq</span>
-                <i className="fa-solid fa-chevron-right"></i>
-              </li>
-              <li>
-                <span>Users</span>
-                <i className="fa-solid fa-chevron-right"></i>
-              </li>
+              <NavLink to={"/services_panel"}>
+                <li>
+                  <span>Services</span>
+                  <i className="fa-solid fa-chevron-right"></i>
+                </li>
+              </NavLink>
+              <NavLink to={"/faq_panel"}>
+                <li>
+                  <span>Faq</span>
+                  <i className="fa-solid fa-chevron-right"></i>
+                </li>
+              </NavLink>
+              <NavLink to={"/services_panel"}>
+                <li>
+                  <span>Users</span>
+                  <i className="fa-solid fa-chevron-right"></i>
+                </li>
+              </NavLink>
             </ul>
           </div>
         </div>

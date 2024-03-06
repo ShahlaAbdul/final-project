@@ -1,9 +1,9 @@
-#login {
+#register {
   max-width: 100%;
   min-height: 100%;
   padding: 3rem 0px;
-  .register {
-    max-width: 700px;
+  .login {
+    max-width: 900px;
     width: 90%;
     margin: 0 auto;
     padding: 40px;
@@ -12,12 +12,6 @@
     background-color: var(--main-theme-light);
     box-shadow: #6c020233 0px 7px 29px 0px;
     line-height: 30px;
-
-    // .fullname {
-    //   display: flex;
-    //   gap: 20px;
-    //   justify-content: space-between;
-    // }
     h1 {
       margin-bottom: 20px;
       text-align: center;

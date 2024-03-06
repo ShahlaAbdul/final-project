@@ -71,6 +71,9 @@ function Navbar() {
                 <li>
                   <NavLink to={"/about"}>About</NavLink>
                 </li>
+                <li>
+                  <NavLink to={"/contact"}>Contact </NavLink>
+                </li>
               </ul>
               <i className="fa-solid fa-bars sidebar"></i>
               <Link to={"/user/login"}>

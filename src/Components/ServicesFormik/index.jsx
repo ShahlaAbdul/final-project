@@ -5,21 +5,21 @@ import * as Yup from "yup";
 import "./style.scss";
 import Button1 from "../Button1";
 import { useContext } from "react";
-import { UserContext } from "../../Context/userContext";
+import { UserContext } from "../../context/userContext";
 
-const validationSchema = Yup.object().shape({
-  filial: Yup.string(),
-  location: Yup.string(),
-  call: Yup.string(),
-  hours: Yup.object().shape({
-    weekly: Yup.string(),
-    weekend: Yup.string(),
-  }),
-});
-
-function ServicesFormik() {
+function ServicesFormik({ onSubmit }) {
   const { token, decode, addToken, logOut } = useContext(UserContext);
-  
+
+  const validationSchema = Yup.object().shape({
+    filial: Yup.string(),
+    location: Yup.string(),
+    call: Yup.string(),
+    hours: Yup.object().shape({
+      weekly: Yup.string(),
+      weekend: Yup.string(),
+    }),
+  });
+
   return (
     <section id="update_table">
       <Formik
@@ -34,25 +34,27 @@ function ServicesFormik() {
         }}
         validationSchema={validationSchema}
         onSubmit={(values, { setSubmitting, resetForm }) => {
-                    setTimeout(() => {
-                     
-                        console.log(values);
-                        fetch("http://localhost:3000/booking/",
-                            {
-                                method: "POST",
-                                headers: {
-                                    'Accept': 'application/json',
-                                    'Content-Type': 'application/json',
-                                    'Authorization': `${token}`
-                                },
-                                body: JSON.stringify(values)
-                            })
-                            .then(function (res) { console.log(res) })
-                            .catch(function (res) { console.log(res) })
-                        setSubmitting(false);
-                        resetForm();
-                    }, 400);
-                }}
+          setTimeout(() => {
+            console.log(values);
+            fetch("http://localhost:3200/api/services", {
+              method: "POST",
+              headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json",
+                Authorization: `${token}`,
+              },
+              body: JSON.stringify(values),
+            })
+              .then(function (res) {
+                console.log(res);
+              })
+              .catch(function (res) {
+                console.log(res);
+              });
+            setSubmitting(false);
+            resetForm();
+          }, 400);
+        }}
       >
         <div>
           <TitleButton text={"add Filial"} />
@@ -111,7 +113,10 @@ function ServicesFormik() {
               />
               <ErrorMessage name="hours.weekend" />
             </div>
-            <Button1 text={"Əlavə et"} onSubmit={onSubmit} />
+            <Button1 type="submit" text={"Əlavə et"} onSubmit={onSubmit} />
+            {/* <button type="submit" onSubmit={onSubmit}>
+              elave{" "}
+            </button> */}
           </Form>
         </div>
       </Formik>
